@@ -9,10 +9,10 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex container j-between">
+    <div className="navbar flex container j-between">
       <div className="flex a-center">
         <Link to={'/'} className="link">
-          <h3>Farukh Kanzhayev</h3>
+          <h2>Farukh Kanzhayev</h2>
         </Link>
       </div>
       <div className="flex a-center" style={{ gap: '10px' }}>

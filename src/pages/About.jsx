@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="container flex column" style={{ gap: '30px' }}>
+    <div className="page container flex column" style={{ gap: '30px' }}>
       <h1 className="title">
         Hi, I'm Farukh, <br />I build things for the web.
       </h1>

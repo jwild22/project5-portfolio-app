@@ -11,6 +11,10 @@
   margin: 2rem auto;
 }
 
+.page {
+  margin-bottom: 150px;
+}
+
 .flex {
   display: flex;
 }
@@ -83,4 +87,18 @@
   font-weight: 600;
   line-height: 36.25px;
   text-align: left;
+}
+
+.skills {
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+}
+
+li {
+  list-style-type: disc;
+  margin-left: 2rem;
+  gap: 10px;
 }

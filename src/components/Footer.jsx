@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <div className="page container">Footer</div>;
+  return <div className="container flex text">Just footer</div>;
 }

@@ -5,7 +5,7 @@ import Projects from './Projects';
 
 export default function Home() {
   return (
-    <div className="page flex column">
+    <div>
       <About />
       <Experience />
       <Projects />

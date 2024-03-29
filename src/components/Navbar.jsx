@@ -1,27 +1,38 @@
-import { Link } from 'react-router-dom';
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Navbar() {
-  const links = [
-    { name: 'About', href: '/about' },
-    { name: 'Experience', href: '/experience' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Contacts', href: '/contacts' },
+  const navLinks = [
+    { to: '/about', text: 'About' },
+    { to: '/experience', text: 'Experience' },
+    { to: '/projects', text: 'Projects' },
+    { to: '/contacts', text: 'Contacts' },
   ];
 
   return (
-    <div className="navbar flex container j-between">
-      <div className="flex a-center">
-        <Link to={'/'} className="link">
-          <h2>Farukh Kanzhayev</h2>
-        </Link>
-      </div>
-      <div className="flex a-center" style={{ gap: '10px' }}>
-        {links.map((link, index) => (
-          <Link key={index} className="link" to={link.href}>
-            {link.name}
-          </Link>
+    <nav className="py-10 mb-12 flex justify-between">
+      <Link to={'/'} className="text-2xl font-burtons">
+        farukh kanzhayev
+      </Link>
+      <ul className="flex items-center gap-6">
+        <li>
+          <BsFillMoonStarsFill className="cursor-pointer text-2xl" />
+        </li>
+        {navLinks.map((link) => (
+          <li key={link.to}>
+            <NavLink
+              to={link.to}
+              className={({ isActive }) =>
+                isActive
+                  ? 'bg-gradient-to-t from-cyan-700 to-teal-700 text-white px-4 py-2 rounded-2xl border-none'
+                  : 'bg-gradient-to-t from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-2xl border-none hover:from-cyan-600 hover:to-teal-600 transition-colors'
+              }
+            >
+              {link.text}
+            </NavLink>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </nav>
   );
 }

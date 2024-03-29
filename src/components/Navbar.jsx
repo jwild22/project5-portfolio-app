@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { Link, NavLink } from 'react-router-dom';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const navLinks = [
@@ -9,12 +11,20 @@ export default function Navbar() {
     { to: '/contacts', text: 'Contacts' },
   ];
 
+  const [navOpen, setNavOpen] = useState(false);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setNavOpen(false);
+  }, [pathname]);
+
   return (
-    <nav className="py-10 mb-12 flex justify-between">
+    <nav className="flex justify-between w-full h-20 items-center">
       <Link to={'/'} className="text-2xl font-burtons">
         farukh kanzhayev
       </Link>
-      <ul className="flex items-center gap-6">
+      <ul className="hidden md:flex items-center gap-6">
         <li>
           <BsFillMoonStarsFill className="cursor-pointer text-2xl" />
         </li>
@@ -33,6 +43,28 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
+      <div
+        onClick={() => setNavOpen(!navOpen)}
+        className={
+          navOpen
+            ? 'cursor-pointer pr-4 z-20 text-white md:hidden'
+            : 'cursor-pointer pr-4 z-20 text-teal-700 md:hidden'
+        }
+      >
+        {navOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
+      </div>
+      {navOpen && (
+        <ul className="flex flex-col justify-center items-center fixed z-10 top-0 left-0 w-full h-screen bg-gradient-to-b from-cyan-700 to-teal-700 cursor-auto">
+          {navLinks.map((link) => (
+            <li
+              key={link.to}
+              className="text-white cursor-pointer px-4 capitalize py-6 text-4xl"
+            >
+              <NavLink to={link.to}>{link.text}</NavLink>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 }

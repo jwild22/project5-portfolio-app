@@ -24,7 +24,7 @@ export default function Navbar() {
       <Link to={'/'} className="text-2xl font-burtons">
         farukh kanzhayev
       </Link>
-      <ul className="hidden md:flex items-center gap-6">
+      <ul className="hidden md:flex items-center justify-center gap-6">
         <li>
           <BsFillMoonStarsFill className="cursor-pointer text-2xl" />
         </li>
@@ -54,11 +54,14 @@ export default function Navbar() {
         {navOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
       {navOpen && (
-        <ul className="flex flex-col justify-center items-center fixed z-10 top-0 left-0 w-full h-screen bg-gradient-to-b from-cyan-700 to-teal-700 cursor-auto">
+        <ul className="flex gap-6 flex-col justify-center items-center fixed z-10 top-0 left-0 w-full h-screen bg-gradient-to-b from-cyan-700 to-teal-700 cursor-auto">
+          <li>
+            <BsFillMoonStarsFill className="cursor-pointer text-4xl text-white" />
+          </li>
           {navLinks.map((link) => (
             <li
               key={link.to}
-              className="text-white cursor-pointer px-4 capitalize py-6 text-4xl"
+              className="text-white cursor-pointer px-4 capitalize text-4xl"
             >
               <NavLink to={link.to}>{link.text}</NavLink>
             </li>

@@ -3,7 +3,7 @@ import Avatar from '../assets/avatar.png';
 
 export default function About() {
   return (
-    <div className="flex flex-col h-svh justify-center">
+    <div className="flex flex-col h-screen justify-center">
       <div className="text-center">
         <h2 className="text-5xl py-2 text-teal-600 font-medium">
           Hi, I&apos;m Farukh

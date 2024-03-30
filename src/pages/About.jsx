@@ -4,11 +4,11 @@ import Avatar from '../assets/avatar.png';
 export default function About() {
   return (
     <div className="flex flex-col justify-center md:h-screen">
-      <div className="text-center m-auto">
-        <h2 className="text-5xl py-2 text-teal-600 font-medium">
+      <div className="text-center mb-5">
+        <h2 className="text-4xl md:text-5xl py-2 text-teal-600 font-medium">
           Hi, I&apos;m Farukh
         </h2>
-        <h3 className="text-2xl py-2">
+        <h3 className="text-xl py-2 md:text-2xl">
           Financial Analyst and{' '}
           <span className="gradient-text inline-flex overflow-hidden whitespace-nowrap animate-typing text-brand-accent border-r-4">
             Software Developer

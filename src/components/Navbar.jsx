@@ -69,7 +69,17 @@ export default function Navbar() {
       {navOpen && (
         <ul className="flex gap-6 flex-col justify-center items-center fixed z-10 top-0 left-0 w-full h-screen bg-gradient-to-b from-cyan-700 to-teal-700 cursor-auto">
           <li>
-            <BsFillMoonStarsFill className="cursor-pointer text-4xl text-white" />
+            {theme === 'light' ? (
+              <BsFillMoonStarsFill
+                onClick={toggleTheme}
+                className="cursor-pointer text-4xl text-white"
+              />
+            ) : (
+              <BsFillSunFill
+                onClick={toggleTheme}
+                className="cursor-pointer text-4xl text-white"
+              />
+            )}
           </li>
           {navLinks.map((link) => (
             <li

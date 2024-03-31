@@ -1,4 +1,5 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { TypeAnimation } from 'react-type-animation';
 import Avatar from '../assets/avatar.png';
 
 export default function About() {
@@ -10,9 +11,13 @@ export default function About() {
         </h2>
         <h3 className="text-xl py-2 md:text-2xl">
           Financial Analyst and{' '}
-          <span className="gradient-text inline-flex overflow-hidden whitespace-nowrap animate-typing text-brand-accent border-r-4">
-            Software Developer
-          </span>
+          <TypeAnimation
+            sequence={['', 450, 'Software Developer', 3000]}
+            wrapper="span"
+            repeat={Infinity}
+            cursor={true}
+            className="text-teal-600 text-xl py-2 md:text-2xl"
+          />
         </h3>
         <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 my-10">
           <img src={Avatar} alt="avatar" />

@@ -8,7 +8,7 @@ export default function Navbar() {
     { to: '/about', text: 'About' },
     { to: '/experience', text: 'Experience' },
     { to: '/projects', text: 'Projects' },
-    { to: '/contacts', text: 'Contacts' },
+    { to: '/contact', text: 'Contact' },
   ];
 
   const [navOpen, setNavOpen] = useState(false);

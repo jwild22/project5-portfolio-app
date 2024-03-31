@@ -1,5 +1,5 @@
 import About from './About';
-import Contacts from './Contacts';
+import Contact from './Contact';
 import Experience from './Experience';
 import Projects from './Projects';
 
@@ -9,7 +9,7 @@ export default function Home() {
       <About />
       <Experience />
       <Projects />
-      <Contacts />
+      <Contact />
     </div>
   );
 }

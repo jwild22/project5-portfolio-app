@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import { useTheme } from './hooks/ThemeContext';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Experience from './pages/Experience';
@@ -9,9 +10,12 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 
 function App() {
+  const { theme } = useTheme();
   return (
-    <div className="min-h-screen bg-white px-10">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div
+        className={`${theme} min-h-screen bg-white px-10 dark:bg-cyan-950 dark:text-white transition-colors`}
+      >
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,8 +25,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { useTheme } from '../hooks/ThemeContext';
 
 export default function Navbar() {
   const navLinks = [
@@ -15,6 +16,8 @@ export default function Navbar() {
 
   const { pathname } = useLocation();
 
+  const { theme, toggleTheme } = useTheme();
+
   useEffect(() => {
     setNavOpen(false);
   }, [pathname]);
@@ -26,7 +29,17 @@ export default function Navbar() {
       </Link>
       <ul className="hidden md:flex items-center justify-center gap-6">
         <li>
-          <BsFillMoonStarsFill className="cursor-pointer text-2xl" />
+          {theme === 'light' ? (
+            <BsFillMoonStarsFill
+              className="cursor-pointer text-2xl"
+              onClick={toggleTheme}
+            />
+          ) : (
+            <BsFillSunFill
+              className="cursor-pointer text-2xl"
+              onClick={toggleTheme}
+            />
+          )}
         </li>
         {navLinks.map((link) => (
           <li key={link.to}>
@@ -34,8 +47,8 @@ export default function Navbar() {
               to={link.to}
               className={({ isActive }) =>
                 isActive
-                  ? 'bg-gradient-to-t from-cyan-700 to-teal-700 text-white px-4 py-2 rounded-2xl border-none'
-                  : 'bg-gradient-to-t from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-2xl border-none hover:from-cyan-600 hover:to-teal-600 transition-colors'
+                  ? 'bg-gradient-to-b from-cyan-700 to-teal-700 text-white px-4 py-2 rounded-2xl border-none'
+                  : 'bg-gradient-to-b from-cyan-600 to-teal-600 text-white px-4 py-2 rounded-2xl border-none hover:from-teal-600 hover:to-cyan-600 transition-colors'
               }
             >
               {link.text}

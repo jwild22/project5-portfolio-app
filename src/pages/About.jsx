@@ -9,14 +9,14 @@ export default function About() {
         <h2 className="text-4xl md:text-5xl py-2 text-teal-500 font-medium">
           Hi, I&apos;m Farukh
         </h2>
-        <h3 className="text-xl py-2 md:text-2xl">
-          Financial Analyst and{' '}
+        <h3 className="text-2xl py-2">
+          Financial Analyst and <br className="flex sm:hidden" />
           <TypeAnimation
             sequence={['', 450, 'Software Developer', 3000]}
             wrapper="span"
             repeat={Infinity}
             cursor={true}
-            className="text-teal-500 text-xl py-2 md:text-2xl"
+            className="text-teal-500 text-2xl py-2"
           />
         </h3>
         <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 my-10">

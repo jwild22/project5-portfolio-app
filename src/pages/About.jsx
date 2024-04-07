@@ -1,5 +1,7 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { HiMiniDocumentArrowDown } from 'react-icons/hi2';
 import { TypeAnimation } from 'react-type-animation';
+import CV from '../../public/cv.pdf';
 import Avatar from '../assets/avatar.png';
 
 export default function About() {
@@ -30,7 +32,7 @@ export default function About() {
           challenges. <span className="text-xl">😁💻</span>
         </p>
       </div>
-      <div className="text-5xl flex justify-center gap-16 text-gray-600">
+      <div className="text-5xl flex justify-center gap-16 text-gray-600 items-center">
         <AiFillLinkedin
           onClick={() =>
             window.location.assign(
@@ -43,6 +45,9 @@ export default function About() {
           onClick={() => window.location.assign('https://github.com/jwild22')}
           className="cursor-pointer text-teal-600 dark:text-teal-500"
         />
+        <a href={CV} download="Farukh's CV" target="_blank">
+          <HiMiniDocumentArrowDown className="cursor-pointer text-teal-600 dark:text-teal-500" />
+        </a>
       </div>
     </div>
   );

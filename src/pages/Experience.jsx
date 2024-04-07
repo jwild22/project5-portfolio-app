@@ -17,14 +17,14 @@ export default function Experience() {
     {
       year: 2022,
       company: 'JTI',
-      position: 'Capital & Operational Expenses analyst',
+      position: 'Capital & Operational Expenses Analyst',
       description:
         'Oversaw the planning process for OPEX/CAPEX, enhanced templates for information management, and maintained monthly closing workflows. Additionally, I improved reporting accuracy by incorporating Work Breakdown Structure (WBS) elements into actual reports.',
     },
     {
       year: 2023,
       company: 'JTI',
-      position: 'Financial Planning, Reporting and Analysis Specialist',
+      position: 'FP&A Specialist',
       description:
         'Crafted financial models and conducted comprehensive financial analyses to inform strategic decision-making. I managed monthly closing workflows, performed variance analysis, and maintained intricate financial spreadsheets and databases for accurate forecasting. Additionally, I collaborated with cross-functional teams to gather financial data and assess the financial impact of proposed initiatives.',
     },

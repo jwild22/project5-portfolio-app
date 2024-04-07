@@ -30,7 +30,7 @@ export default function About() {
           challenges. <span className="text-xl">😁💻</span>
         </p>
       </div>
-      <div className="text-5xl flex justify-center gap-16 pb-3 text-gray-600">
+      <div className="text-5xl flex justify-center gap-16 text-gray-600">
         <AiFillLinkedin
           onClick={() =>
             window.location.assign(

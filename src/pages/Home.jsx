@@ -5,7 +5,7 @@ import Projects from './Projects';
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col gap-8 md:gap-6">
       <About />
       <Experience />
       <Projects />

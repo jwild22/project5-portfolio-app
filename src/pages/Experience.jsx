@@ -39,13 +39,16 @@ export default function Experience() {
   return (
     <div className="flex flex-col items-center md:min-h-screen justify-center gap-4">
       <h3 className="text-5xl font-medium inline">Experience</h3>
-      <div className="w-11/12 md:w-9/12 mt-10 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-black">
+      <div className="w-11/12 md:w-9/12 mt-10 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-black before:dark:bg-slate-300">
         <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-teal-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
           <h3 className="absolute left-0 text-lg font-semibold">2017</h3>
           <p className="flex flex-col gap-3">
-            <h3 className="flex font-medium text-lg">
+            <h3 className="flex font-medium text-teal-700 text-lg dark:text-teal-400">
               KIMEP University&nbsp;
-              <span className="font-normal"> - Bachelor Degree.</span>
+              <span className="font-normal text-black dark:text-white">
+                {' '}
+                - Bachelor Degree.
+              </span>
             </h3>
             <p>
               Graduated from KIMEP University with a major in Accounting and
@@ -62,8 +65,11 @@ export default function Experience() {
               {item.year}
             </h3>
             <p className="flex flex-col gap-3">
-              <h3 className="flex font-medium text-lg">
-                {item.company} - {item.position}
+              <h3 className="flex font-medium text-teal-700 text-lg dark:text-teal-400">
+                {item.company}&nbsp;
+                <span className="font-normal text-black dark:text-white">
+                  - {item.position}
+                </span>
               </h3>
               <p>{item.description}</p>
             </p>

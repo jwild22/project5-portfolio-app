@@ -9,21 +9,21 @@ export default function Experience() {
     },
     {
       year: 2021,
-      company: 'JTI',
+      company: 'Japan Tabacco International (JTI)',
       position: 'Trade Marketing Trainee',
       description:
         'Facilitated the launch and communication of activities across markets by preparing essential calculations, collecting data for program reports, analyzing program effectiveness, and contributing to program development through budgeting and defining KPIs and thresholds.',
     },
     {
       year: 2022,
-      company: 'JTI',
+      company: 'Japan Tabacco International (JTI)',
       position: 'Capital & Operational Expenses Analyst',
       description:
         'Oversaw the planning process for OPEX/CAPEX, enhanced templates for information management, and maintained monthly closing workflows. Additionally, I improved reporting accuracy by incorporating Work Breakdown Structure (WBS) elements into actual reports.',
     },
     {
       year: 2023,
-      company: 'JTI',
+      company: 'Japan Tabacco International (JTI)',
       position: 'FP&A Specialist',
       description:
         'Crafted financial models and conducted comprehensive financial analyses to inform strategic decision-making. I managed monthly closing workflows, performed variance analysis, and maintained intricate financial spreadsheets and databases for accurate forecasting. Additionally, I collaborated with cross-functional teams to gather financial data and assess the financial impact of proposed initiatives.',
@@ -43,11 +43,11 @@ export default function Experience() {
         <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-teal-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
           <h3 className="absolute left-0 text-lg font-semibold">2017</h3>
           <p className="flex flex-col gap-3">
-            <h3 className="flex font-medium text-teal-700 text-lg dark:text-teal-400">
+            <h3 className="flex flex-col font-medium text-teal-700 text-lg dark:text-teal-400">
               KIMEP University&nbsp;
               <span className="font-normal text-black dark:text-white">
                 {' '}
-                - Bachelor Degree.
+                Bachelor in Accounting and Audit (BACTA)
               </span>
             </h3>
             <p>
@@ -65,10 +65,10 @@ export default function Experience() {
               {item.year}
             </h3>
             <p className="flex flex-col gap-3">
-              <h3 className="flex font-medium text-teal-700 text-lg dark:text-teal-400">
+              <h3 className="flex flex-col font-medium text-teal-700 text-lg dark:text-teal-400">
                 {item.company}&nbsp;
                 <span className="font-normal text-black dark:text-white">
-                  - {item.position}
+                  {item.position}
                 </span>
               </h3>
               <p>{item.description}</p>

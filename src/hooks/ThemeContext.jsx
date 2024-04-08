@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from 'react';
 
 const getInitialTheme = () => {
   const savedTheme = localStorage.getItem('theme');
-  return savedTheme ? JSON.parse(savedTheme) : 'light';
+  return savedTheme ? JSON.parse(savedTheme) : 'dark';
 };
 
 const ThemeContext = createContext();
